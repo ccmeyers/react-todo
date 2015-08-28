@@ -22,13 +22,14 @@ var List = React.createClass({
         fontSize: 17
       }
     };
+    var that = this;
     var listItems = this.props.items.map(function(item, index){
       return (
         <li key={index} className="list-group-item" style={styles.listGroup}>
           <button
             className="glyphicon glyphicon-remove"
             style={styles.removeItem}
-            // onClick={this.props.remove.bind(null, index)} //this line is breaking everything
+            onClick={that.props.remove.bind(null, index)} //this line is breaking everything
           />
           <span style={styles.todoItem}>
             {item}
