@@ -28,7 +28,7 @@ var List = React.createClass({
           <button
             className="glyphicon glyphicon-remove"
             style={styles.removeItem}
-            onClick={this.props.remove.bind(null, index)}
+            // onClick={this.props.remove.bind(null, index)} //this line is breaking everything
           />
           <span style={styles.todoItem}>
             {item}
